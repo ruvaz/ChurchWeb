@@ -15,7 +15,15 @@ class CreatePredicasTable extends Migration
     {
         Schema::create('predicas', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+                $table->integer('serie_id')->unsigned()->index();
+                $table->integer('preacher_id')->unsigned()->index();
+                $table->string('title');
+                $table->text('body');
+                $table->string('mp3');
+                $table->string('video');
+                $table->string('file');
+                $table->string('slug');
+                $table->timestamps();
         });
     }
 

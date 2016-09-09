@@ -15,6 +15,7 @@ class CreatePreachersTable extends Migration
     {
         Schema::create('preachers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->timestamps();
         });
     }
